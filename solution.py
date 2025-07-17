@@ -37,7 +37,7 @@ def get_disease_solution_translated(crop: str, disease: str, language: str) -> s
     }
 
     HEADERS = {
-    "Authorization": f"Bearer {os.getenv("TOKEN")}",
+    "Authorization": f"Bearer {os.getenv('TOKEN')}",
     "Content-Type": "application/json"
     }
 
