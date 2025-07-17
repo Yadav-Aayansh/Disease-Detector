@@ -7,25 +7,25 @@ import io
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # ==== Load Crop Or Not Crop Detection Model ====
-crop_or_not_model = torch.load("app/models/crop_or_notcrop_model.pth", map_location=device, weights_only=False)
+crop_or_not_model = torch.load("models/crop_or_notcrop_model.pth", map_location=device, weights_only=False)
 crop_or_not_model.eval()
 
 # ==== Load Crop Detection Model ====
-crop_detection_model = torch.load("app/models/crop_detection_newmodel2.pth", map_location=device, weights_only=False)
+crop_detection_model = torch.load("models/crop_detection_newmodel2.pth", map_location=device, weights_only=False)
 crop_detection_model.eval()
 
 # ==== Load Disease Models ====
 model_paths = {
-    "Banana": "app/models/Banana_model.pth",
-    "Cotton": "app/models/Cotton_model.pth",
-    "Maize": "app/models/Maize_model.pth",
-    "Mango": "app/models/mango_newmodel2.pth",
-    "Onion": "app/models/Onion_model.pth",
-    "Paddy": "app/models/Paddy_model.pth",
-    "Potato": "app/models/Potato_model.pth",
-    "Sugarcane": "app/models/Sugarcane_model.pth",
-    "Tomato": "app/models/Tomato_model.pth",
-    "Wheat": "app/models/Wheat_model.pth",
+    "Banana": "models/Banana_model.pth",
+    "Cotton": "models/Cotton_model.pth",
+    "Maize": "models/Maize_model.pth",
+    "Mango": "models/mango_newmodel2.pth",
+    "Onion": "models/Onion_model.pth",
+    "Paddy": "models/Paddy_model.pth",
+    "Potato": "models/Potato_model.pth",
+    "Sugarcane": "models/Sugarcane_model.pth",
+    "Tomato": "models/Tomato_model.pth",
+    "Wheat": "models/Wheat_model.pth",
 }
 
 sub_models = {}
